@@ -10,12 +10,12 @@ defmodule CenturyFromYear do
           last_digit == "0" -> cent
           true -> 1 + cent
         end
-        true -> 
-          [ y, a, _ | [last_digit] ] = String.split(Kernel.inspect(year), "", trim: true)
-          cond do
-            last_digit == "0" -> String.to_integer(y <> a)
-            true -> 1 + String.to_integer(y <> a)
-          end
+      true -> 
+        [ y, a, _ | [last_digit] ] = String.split(Kernel.inspect(year), "", trim: true)
+        cond do
+          last_digit == "0" -> String.to_integer(y <> a)
+          true -> 1 + String.to_integer(y <> a)
+        end
     end
   end
 
