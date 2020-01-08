@@ -7,7 +7,7 @@ defmodule CenturyFromYear do
         [ y, _1 | [last_digit] ] = String.split(Kernel.inspect(year), "", trim: true)
         { cent, _} = Integer.parse(y)
         cond do
-          last_digit =="0" -> cent
+          last_digit == "0" -> cent
           true -> 1 + cent
         end
         true -> 
