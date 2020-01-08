@@ -4,5 +4,4 @@ defmodule Palindrome do
     word = String.graphemes(word)
     word == Enum.reverse(word)
   end
-  
 end
